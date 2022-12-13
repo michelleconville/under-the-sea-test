@@ -75,7 +75,7 @@
     color: #12232E;
   }
   
-  /* styling the game */
+  /* styling the gameboards */
   .game-info-container {
     grid-column: 1 / -1;
     display: flex;
@@ -98,3 +98,43 @@
     perspective: 1000px;
   }
   
+  /* styling to flip the cards */
+.memory-card {
+    position: relative;
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+  .memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+.card-back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  background: #12232e;
+  border-radius: 10px;
+  border-width: .2px;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
