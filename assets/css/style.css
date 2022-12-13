@@ -6,99 +6,100 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    ;
     box-sizing: border-box;
     text-align: center;
-  }
-  
-  html {
+}
+
+html {
     min-height: 100vh;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     background: radial-gradient(#4DA8DA, #12232e);
-  }
+}
 
-  h1 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     color: #12232E;
     text-transform: uppercase;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .container-nav {
+}
+
+.container-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .page-title {
+.page-title {
     color: #DBFCFF;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 4em;
-  }
-  
-  header {
+}
+
+header {
     background-color: #DBFCFF;
     padding: 0.8em 0;
     box-shadow: 2px 2px 10px white;
-  }
-  
-  header a {
+}
+
+header a {
     text-decoration: none;
-  }
-  
-  /* styling the nav bar */
-  nav ul {
+}
+
+/* styling the nav bar */
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-  }
-  
-  nav li {
+}
+
+nav li {
     margin-left: 3em;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     cursor: pointer;
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: #12232E;
-  }
-  
-  /* styling the gameboards */
-  .game-info-container {
+}
+
+/* styling the gameboards */
+.game-info-container {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
-  }
-  
-  .game-info {
+}
+
+.game-info {
     color: #DBFCFF;
     font-family: 'Hind', sans-serif;
     font-size: 2em;
-  }
-  
-  .game-container {
+}
+
+.game-container {
     margin: 5px 0 10px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 5px;
     justify-content: center;
     perspective: 1000px;
-  }
-  
-  /* styling to flip the cards */
+}
+
+/* styling to flip the cards */
 .memory-card {
     position: relative;
     cursor: pointer;
@@ -107,34 +108,56 @@
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-  }
-  
-  .memory-card:active {
+}
+
+.memory-card:active {
     transform: scale(.97);
     transition: transform .2s;
-  }
-  
-  .memory-card.flip {
-    transform: rotateY(180deg);
-  }
+}
 
-  .card-front,
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front,
 .card-back {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 3px;
-  background: #12232e;
-  border-radius: 10px;
-  border-width: .2px;
-  overflow: hidden;
-  transition: transform 500ms ease-in-out;
-  backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    background: #12232e;
+    border-radius: 10px;
+    border-width: .2px;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+    backface-visibility: hidden;
 }
 
 .card-front {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.game-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #DBFCFF;
+    border: 1px solid #12232e;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: #12232e;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.game-btn:hover {
+    border: 1px solid #12232e;
+    background: #DBFCFF;
+    color: #0d0d2f;
+    text-decoration: none;
+    transition: 1s;
 }
